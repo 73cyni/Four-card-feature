@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --head: hsl(234, 12%, 34%);
+    --paragrap: hsl(229, 6%, 66%);
+    --bg: hsl(0, 0%, 98%);
+}
+
+* {
+    margin:0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    background-color: var(--bg);
+    padding: 4rem 7rem;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.text {
+    text-align: center;
+}
+.text h1 , .text h2 {
+    color: var(--head);
+    font-size: 2.4rem;
+}
+.text h2 {
+    font-weight: 200;
+}
+.text p {
+    width: 100%;
+    max-width: 35rem;
+    color: var(--paragrap);
+    margin: 1rem auto;
+}
+
+.content .item {
+    overflow: hidden;
+    position:relative;
+    background-color: #fff;
+    max-width: 25rem;
+    width: 100%;
+    padding: 2rem;
+    /* border: 1px solid #000; */
+    box-shadow: 0 12px 30px -15px hsla(212, 46%, 53%, 0.596);
+    height: fit-content;
+    margin: auto;
+    border-radius: 10px;
+}
+.content .item h2 {
+    color: var(--head);
+}
+.content .item p {
+    margin-top: 0.5rem;
+    line-height: 1.6rem;
+    color: var(--paragrap);
+}
+.content .img {
+    margin-top: 3rem;
+    text-align: end;
+}
+.content {
+    margin-top: 3.5rem;
+    display: grid;
+    grid-template-areas:
+    "item-1 item-2 item-4"
+    "item-1 item-2 item-4"
+    "item-1 item-3 item-4"
+    "item-1 item-3 item-4";
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(4,auto);
+}
+.content .item .color {
+    height: 4px;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+}
+.content .it-1 {
+    grid-area: item-1;
+}
+.content .it-1 .color {
+    background-color: var(--Cyan);
+}
+.content .it-2 {
+    grid-area: item-2;
+}
+.content .it-2 .color {
+    background-color: var(--Red);
+}
+.content .it-3 {
+    grid-area: item-3;
+}
+.content .it-3 .color {
+    background-color: var(--Orange);
+}
+.content .it-4 {
+    grid-area: item-4;
+}
+.content .it-4 .color {
+    background-color: var(--Blue);
+}
+
+@media screen and (max-width:810px) {
+    html {
+        font-size: 85%;
+    }
+    body {
+        height: auto;
+    }
+    .content {
+        margin-top: 6rem;
+        grid-template-areas:
+        "item-1"
+        "item-2"
+        "item-3"
+        "item-4";
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4,auto);
+    }
+    .main {
+        padding: 7rem 2rem;
+    }
+    .text h1 ,.text h2{
+        font-size: 1.9rem;
+    }
+    .text p {
+        font-size: 1.17rem;
+    }
+}
+
+
+
+
